@@ -2,7 +2,11 @@
 
 ## description
 
+### originally started as
 spyder-test-nltk
+
+### changed to
+run in VSCode
 
 ## content
 
