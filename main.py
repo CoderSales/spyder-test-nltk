@@ -38,9 +38,10 @@ TreebankWordTokenizer().tokenize(s)
 from nltk.tokenize import TreebankWordTokenizer
 s = '''Good muffins cost $3.88\nin New (York).  Please (buy) me\ntwo of them.\n(Thanks).'''
 expected = [(0, 4), (5, 12), (13, 17), (18, 19), (19, 23),(24, 26), (27, 30), (31, 32), (32, 36), (36, 37), (37, 38),(40, 46), (47, 48), (48, 51), (51, 52), (53, 55), (56, 59),(60, 62), (63, 68), (69, 70), (70, 76), (76, 77), (77, 78)]
-list(TreebankWordTokenizer().span_tokenize(s)) == expected
+print(list(TreebankWordTokenizer().span_tokenize(s)) == expected)
 expected = ['Good', 'muffins', 'cost', '$', '3.88', 'in','New', '(', 'York', ')', '.', 'Please', '(', 'buy', ')','me', 'two', 'of', 'them.', '(', 'Thanks', ')', '.']
-[s[start:end] for start, end in TreebankWordTokenizer().span_tokenize(s)] == expected
+print(expected)
+# print([s[start:end] for start, end in TreebankWordTokenizer().span_tokenize(s)] == expected)
 
 from nltk.tokenize import TreebankWordTokenizer
 s = '''Good muffins cost $3.88 (roughly 3,36 euros)\nin New York.  Please buy me\ntwo of them.\nThanks.'''
