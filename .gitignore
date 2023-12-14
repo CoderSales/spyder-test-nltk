@@ -161,6 +161,7 @@ cython_debug/
 
 # :default
 # custom:
+files
 files/*
 .vscode
 .vscode/*
